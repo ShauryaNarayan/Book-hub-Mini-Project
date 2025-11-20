@@ -1,0 +1,158 @@
+/* -------- MAIN LAYOUT -------- */
+
+.bookshelves-layout {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 32px;
+}
+
+/* -------- LEFT SIDEBAR -------- */
+
+.bs-left-side {
+  width: 240px;
+  background-color: #f8fafc;
+  padding: 24px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.bs-left-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.bs-left-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bs-left-btn {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+.bs-left-btn.active {
+  background-color: #0284c7;
+  color: #fff;
+}
+
+/* -------- RIGHT SIDE -------- */
+
+.bs-right-side {
+  flex: 1;
+}
+
+/* TOP HEADER */
+.bs-right-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.bs-right-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* SEARCH BAR */
+.bs-search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  height: 40px;
+}
+
+.bs-search-input {
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.bs-search-btn {
+  width: 40px;
+  height: 100%;
+  border: none;
+  background-color: #f1f5f9;
+  cursor: pointer;
+}
+
+/* -------- BOOK GRID (Matches Figma) -------- */
+
+.bs-books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.bs-book-item {
+  display: flex;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.bs-book-cover {
+  width: 133px;
+  height: 155px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.bs-book-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* DETAILS */
+.bs-book-author {
+  font-size: 14px;
+  color: #475569;
+}
+
+.bs-book-rating {
+  font-size: 14px;
+  color: #334155;
+  margin: 6px 0;
+}
+
+.bs-book-status {
+  font-size: 14px;
+  color: #475569;
+}
+
+/* -------- RESPONSIVE -------- */
+
+@media (max-width: 992px) {
+  .bs-books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bookshelves-layout {
+    flex-direction: column;
+  }
+  .bs-left-side {
+    width: 100%;
+  }
+  .bs-books-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

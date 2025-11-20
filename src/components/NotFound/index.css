@@ -1,0 +1,28 @@
+.not-found-bg {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: #f5f7fa;
+}
+
+.not-found-bg img {
+  max-width: 320px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.not-found-bg h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.not-found-bg p {
+  font-size: 14px;
+  color: #64748b;
+  text-align: center;
+  max-width: 420px;
+}
