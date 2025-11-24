@@ -156,3 +156,61 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+/* ---------- SEARCH BAR ABOVE BOOKSHELVES ---------- */
+
+/* This wrapper already exists in your JSX */
+.bs-search-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* align to right below Logout */
+  width: 100%;
+  max-width: 420px; /* clean size similar to Figma */
+  margin: 20px auto 10px auto; /* positions it visually below logout */
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  height: 40px;
+}
+
+/* Input inside the search bar */
+.bs-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 14px;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+
+.bs-search-input::placeholder {
+  color: #94a3b8;
+}
+
+/* Search button on right */
+.bs-search-btn {
+  width: 48px;
+  height: 100%;
+  border: none;
+  background-color: #f1f5f9;
+  border-left: 1px solid #e2e8f0;
+  cursor: pointer;
+}
+
+.bs-search-btn:hover {
+  background-color: #e2e8f0;
+}
+
+/* Optional shadow to match Figma style */
+.bs-search-box {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .bs-search-box {
+    max-width: 90%;
+    margin: 16px auto;
+  }
+}
