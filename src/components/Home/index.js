@@ -76,7 +76,8 @@ class Home extends Component {
     return (
       <Slider {...settings}>
         {books.map(item => (
-          <div
+          <button
+            type="button"
             key={item.id}
             className="carousel-item"
             onClick={() => history.push(`/books/${item.id}`)}
@@ -85,7 +86,7 @@ class Home extends Component {
 
             <h1 className="book-title">{item.title}</h1>
             <p className="book-author">{item.authorName}</p>
-          </div>
+          </button>
         ))}
       </Slider>
     )
@@ -106,7 +107,7 @@ class Home extends Component {
   )
 
   renderLoader = () => (
-    <div className="loader-container" testid="loader">
+    <div className="loader-container" data-testid="loader">
       <Loader type="TailSpin" color="#0284C7" height={50} width={50} />
     </div>
   )

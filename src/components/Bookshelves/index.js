@@ -6,9 +6,30 @@ import {BsSearch, BsFillStarFill} from 'react-icons/bs'
 
 import Header from '../Header'
 import Footer from '../Footer'
-import {bookshelvesList} from '../../App'
-
 import './index.css'
+
+const bookshelvesList = [
+  {
+    id: '22526c8e-680e-4419-a041-b05cc239ece4',
+    value: 'ALL',
+    label: 'All',
+  },
+  {
+    id: '37e09397-fab2-46f4-9b9a-66b2324b2e22',
+    value: 'READ',
+    label: 'Read',
+  },
+  {
+    id: '2ab42512-3d05-4fba-8191-5122175b154e',
+    value: 'CURRENTLY_READING',
+    label: 'Currently Reading',
+  },
+  {
+    id: '361d5fd4-9ea1-4e0c-bd47-da2682a5b7c8',
+    value: 'WANT_TO_READ',
+    label: 'Want to Read',
+  },
+]
 
 const apiStatus = {
   initial: 'INITIAL',
@@ -83,7 +104,7 @@ class Bookshelves extends Component {
   // -------------------- Views --------------------
 
   renderLoader = () => (
-    <div className="bookshelves-loader" testid="loader">
+    <div className="bookshelves-loader" data-testid="loader">
       <Loader type="TailSpin" color="#0284C7" height={50} width={50} />
     </div>
   )
@@ -167,7 +188,7 @@ class Bookshelves extends Component {
   }
 
   renderSuccess = () => {
-    const {activeShelf, shelfHeading, searchInput} = this.state
+    const {activeShelf, shelfHeading} = this.state
 
     return (
       <div className="bookshelves-layout">
@@ -237,7 +258,7 @@ class Bookshelves extends Component {
 
           <button
             type="button"
-            testid="searchButton"
+            data-testid="searchButton"
             className="bs-search-btn"
             onClick={this.onSearchClick}
           >

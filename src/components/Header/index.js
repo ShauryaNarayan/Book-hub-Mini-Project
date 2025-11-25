@@ -32,7 +32,7 @@ const Header = props => {
               className="logout-btn"
               onClick={onClickLogout}
             >
-              <h1 role="heading">Logout</h1>
+              <h1>Logout</h1>
             </button>
           </li>
         </ul>
